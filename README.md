@@ -10,6 +10,7 @@
 <h4 align="center">Truyền hình Thông tấn: Ở đâu có tin tức, ở đó có <a href="https://vnews.gov.vn/" target="_blank">VNEWS</a>.</h4>
 
 <p align="center">
+  <a href="#team-member">Team Members</a> •
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#download">Download</a> •
@@ -17,6 +18,12 @@
   <a href="#related">Related</a> •
   <a href="#license">License</a>
 </p>
+
+## Team Members
+* A40333 - Mai Văn Tuấn
+* A39208 - Lương Thị Bích Hợp
+* A38954 - Đỗ Mạnh Tài
+* A38815 - Hoàng Thị Hằng
 
 ## Key Features
 
