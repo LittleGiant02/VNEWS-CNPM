@@ -7,4 +7,25 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="kColorBlackBgItemHot">#888888</color>
+
+    <color name="black_opacity">#333333</color>
+    <color name="white_opacity">#05FFFFFF</color>
+
+    <color name="kColorThemeApp">#FF293C96</color>
+    <color name="kColorTitle">#FF333333</color>
+    <color name="kColorCategory">#FF3A53A4</color>
+    <color name="kColorTimeAgo">#FF888888</color>
+    <color name="kColorLive">#FFFF0000</color>
+
+    <color name="kColorUnSelectedText">#FFC4C4C4</color>
+
+    <color name="kColorDivider">#FFD8D8D8</color>
+
+    <color name="kGrayBackground">#FFE5E5E5</color>
+    <color name="kColorPerson">#FFE4E5E7</color>
+
+    <color name="kGrayBackground2">#F1F1F1</color>
+
 </resources>

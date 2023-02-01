@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">vnews_cnpm</string>
+    <string name="app_name">VNews CNPM</string>
+
+    <string name="years_before">%d năm trước</string>
+    <string name="months_before">%d tháng trước</string>
+    <string name="days_before">%d ngày trước</string>
+    <string name="hours_before">%d giờ trước</string>
+    <string name="minutes_before">%d phút trước</string>
+
+    <string name="navHome">Trang chủ</string>
+    <string name="navVideo">Video</string>
+    <string name="navNews">Tin tức</string>
+    <string name="navLive">Live</string>
+    <string name="navCategory">Chuyên mục</string>
+    <string name="no_data">Không có dữ liệu.</string>
+    <string name="text_change_avatar"><u>Thay ảnh đại diện</u></string>
+
 </resources>
