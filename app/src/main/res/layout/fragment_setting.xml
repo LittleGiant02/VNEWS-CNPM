@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".ui.fragment.setting.FragmentSetting">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/buttonClose"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Tài khoản"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/buttonClose"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/buttonClose" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="16dp"
+            android:id="@+id/layoutUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/kGrayBackground2"
+            android:paddingBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@id/text">
+
+            <ImageView
+                android:id="@+id/imageViewAvatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_person_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/kColorPerson" />
+
+            <TextView
+                android:id="@+id/btChangeAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="@string/text_change_avatar"
+                android:textColor="@color/kColorThemeApp"
+                android:textFontWeight="600"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@id/imageViewAvatar"
+                app:layout_constraintStart_toStartOf="@id/imageViewAvatar"
+                app:layout_constraintTop_toBottomOf="@id/imageViewAvatar" />
+
+            <TextView
+                android:id="@+id/textViewUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="Tài khoản"
+                android:textColor="@color/black"
+                android:textFontWeight="600"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/btChangeAvatar" />
+
+            <EditText
+                android:id="@+id/editTextUser"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rectangle"
+                android:paddingStart="8dp"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@id/textViewUser" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:textFontWeight="600"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/editTextUser" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rectangle"
+                android:paddingStart="8dp"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@id/textViewEmail" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textViewSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Cài đặt"
+            android:textColor="@color/kColorTimeAgo"
+            android:textFontWeight="700"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutUser" />
+
+        <View
+            android:id="@+id/viewDividerInSetting"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/kGrayBackground2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewSetting"
+            app:layout_constraintTop_toBottomOf="@id/textViewSetting" />
+
+        <TextView
+            android:id="@+id/textViewNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Nhận tin mới"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textViewSetting"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerInSetting" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/textViewNotification"
+            app:layout_constraintEnd_toEndOf="@id/viewDividerInSetting"
+            app:layout_constraintTop_toTopOf="@id/textViewNotification" />
+
+        <TextView
+            android:id="@+id/textViewChangeFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Chỉnh phong chữ"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textViewSetting"
+            app:layout_constraintTop_toBottomOf="@id/textViewNotification" />
+
+        <!--        style="@style/Widget.App.Switch"-->
+        <TextView
+            android:id="@+id/btChangeFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:gravity="center"
+            android:text="14"
+            android:textColor="@color/kColorThemeApp"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/textViewChangeFont"
+            app:layout_constraintEnd_toEndOf="@id/viewDividerInSetting"
+            app:layout_constraintTop_toTopOf="@id/textViewChangeFont" />
+
+        <View
+            android:id="@+id/viewDividerSetting"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/kGrayBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewChangeFont" />
+
+        <TextView
+            android:id="@+id/textViewWatchMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Chế độ chỉ xem"
+            android:textColor="@color/kColorTimeAgo"
+            android:textFontWeight="700"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerSetting" />
+
+
+        <View
+            android:id="@+id/viewDividerInWatchMode"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/kGrayBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewWatchMode"
+            app:layout_constraintTop_toBottomOf="@id/textViewWatchMode" />
+
+        <TextView
+            android:id="@+id/textViewModeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Text"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textViewWatchMode"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerInWatchMode" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_check"
+            app:layout_constraintBottom_toBottomOf="@id/textViewModeText"
+            app:layout_constraintEnd_toEndOf="@id/viewDividerInWatchMode"
+            app:layout_constraintTop_toTopOf="@id/textViewModeText" />
+
+        <TextView
+            android:id="@+id/tvModeVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Video"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textViewModeText"
+            app:layout_constraintTop_toBottomOf="@id/textViewModeText" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_check"
+            app:layout_constraintBottom_toBottomOf="@id/tvModeVideo"
+            app:layout_constraintEnd_toEndOf="@id/viewDividerInWatchMode"
+            app:layout_constraintTop_toTopOf="@id/tvModeVideo" />
+
+        <TextView
+            android:id="@+id/tvModePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Ảnh"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tvModeVideo"
+            app:layout_constraintTop_toBottomOf="@id/tvModeVideo" />
+
+        <ImageView
+            android:id="@+id/btModePicture"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_check"
+            app:layout_constraintBottom_toBottomOf="@id/tvModePicture"
+            app:layout_constraintEnd_toEndOf="@id/viewDividerInWatchMode"
+            app:layout_constraintTop_toTopOf="@id/tvModePicture" />
+
+        <View
+            android:id="@+id/viewDividerWatchMode"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/kGrayBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvModePicture" />
+
+        <TextView
+            android:id="@+id/textViewRunningBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Chế độ chạy nền"
+            android:textColor="@color/kColorTimeAgo"
+            android:textFontWeight="700"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerWatchMode" />
+
+        <View
+            android:id="@+id/viewDividerInRunningBackground"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/kGrayBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewRunningBackground"
+            app:layout_constraintTop_toBottomOf="@id/textViewRunningBackground" />
+
+        <TextView
+            android:id="@+id/textViewAllowRunningBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Cho phép chạy nền"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textViewRunningBackground"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerInRunningBackground" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchRunningBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/kColorThemeApp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/textViewAllowRunningBackground"
+            app:layout_constraintEnd_toEndOf="@id/viewDividerInRunningBackground"
+            app:layout_constraintTop_toTopOf="@id/textViewAllowRunningBackground" />
+
+        <View
+            android:id="@+id/viewDividerRunningBackground"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/kGrayBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewAllowRunningBackground" />
+
+        <TextView
+            android:id="@+id/textViewSettingVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Cài đặt video"
+            android:textColor="@color/kColorTimeAgo"
+            android:textFontWeight="700"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerRunningBackground" />
+
+        <View
+            android:id="@+id/viewDividerInSettingVideo"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/kGrayBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewSettingVideo"
+            app:layout_constraintTop_toBottomOf="@id/textViewSettingVideo" />
+
+        <TextView
+            android:id="@+id/textViewAutoPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Cho phép tự động phát"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textViewSettingVideo"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerInSettingVideo" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/textViewAutoPlay"
+            app:layout_constraintEnd_toEndOf="@id/viewDividerInSettingVideo"
+            app:layout_constraintTop_toTopOf="@id/textViewAutoPlay" />
+
+        <View
+            android:id="@+id/viewDividerInAutoPlay"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/kGrayBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewAutoPlay"
+            app:layout_constraintTop_toBottomOf="@id/textViewAutoPlay" />
+
+        <TextView
+            android:id="@+id/textViewQuality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Chất lượng video"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textViewSettingVideo"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerInAutoPlay" />
+
+        <TextView
+            android:id="@+id/buttonQuality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:gravity="center"
+            android:text="Auto"
+            android:textColor="@color/kColorThemeApp"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/textViewQuality"
+            app:layout_constraintEnd_toEndOf="@id/viewDividerInAutoPlay"
+            app:layout_constraintTop_toTopOf="@id/textViewQuality" />
+        <!--    ///-->
+        <View
+            android:id="@+id/viewDividerSettingVideo"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/kGrayBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewQuality" />
+
+        <TextView
+            android:id="@+id/textViewInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Thông tin khác"
+            android:textColor="@color/kColorTimeAgo"
+            android:textFontWeight="700"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerSettingVideo" />
+
+        <View
+            android:id="@+id/viewDividerInInfo"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/kGrayBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewInfo"
+            app:layout_constraintTop_toBottomOf="@id/textViewInfo" />
+
+        <TextView
+            android:id="@+id/textViewFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Gửi phản hồi"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textViewInfo"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerInInfo" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_nav_next"
+            android:textColor="@color/kColorThemeApp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/textViewFeedback"
+            app:layout_constraintEnd_toEndOf="@id/viewDividerInInfo"
+            app:layout_constraintTop_toTopOf="@id/textViewFeedback" />
+
+        <View
+            android:id="@+id/viewDividerInFeedback"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/kGrayBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewFeedback"
+            app:layout_constraintTop_toBottomOf="@id/textViewFeedback" />
+
+        <TextView
+            android:id="@+id/textViewTermAndPolicies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Điều kiện và chính sách"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textViewInfo"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerInFeedback" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_nav_next"
+            android:textColor="@color/kColorThemeApp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/textViewTermAndPolicies"
+            app:layout_constraintEnd_toEndOf="@id/viewDividerInFeedback"
+            app:layout_constraintTop_toTopOf="@id/textViewTermAndPolicies" />
+
+        <View
+            android:id="@+id/viewDividerInTermAndPolicies"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/kGrayBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewTermAndPolicies"
+            app:layout_constraintTop_toBottomOf="@id/textViewTermAndPolicies" />
+
+        <TextView
+            android:id="@+id/textViewContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Thông tin liên hệ"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textViewInfo"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerInTermAndPolicies" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_nav_next"
+            android:textColor="@color/kColorThemeApp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/textViewContact"
+            app:layout_constraintEnd_toEndOf="@id/viewDividerInTermAndPolicies"
+            app:layout_constraintTop_toTopOf="@id/textViewContact" />
+
+        <View
+            android:id="@+id/viewDividerInContact"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/kGrayBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewContact"
+            app:layout_constraintTop_toBottomOf="@id/textViewContact" />
+
+        <TextView
+            android:id="@+id/textViewAds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Thông tin đặt quảng cáo"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/textViewInfo"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerInContact" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_nav_next"
+            android:textColor="@color/kColorThemeApp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/textViewAds"
+            app:layout_constraintEnd_toEndOf="@id/viewDividerInContact"
+            app:layout_constraintTop_toTopOf="@id/textViewAds" />
+
+        <View
+            android:id="@+id/viewDividerAds"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/kGrayBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewAds"
+            app:layout_constraintTop_toBottomOf="@id/textViewAds" />
+
+
+        <Button
+            android:id="@+id/btUpdateUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/kColorThemeApp"
+            android:paddingVertical="8dp"
+            android:text="Cập nhật"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerAds" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
