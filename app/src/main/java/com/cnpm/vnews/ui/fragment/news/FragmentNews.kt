@@ -11,6 +11,7 @@ import com.cnpm.cnpm_vnews.viewmodel.NewsViewModel
 import com.cnpm.vnews.const_util.apiNewsScreen
 import com.cnpm.vnews.databinding.FragmentNewsBinding
 import com.cnpm.vnews.model.MediaModel
+import com.cnpm.vnews.ui.fragment.detail.news_video.FragmentVideoNewsDetail
 import com.cnpm.vnews.viewmodel.VideoViewModel
 
 class FragmentNews : Fragment() {
@@ -98,12 +99,12 @@ class FragmentNews : Fragment() {
                         binding.recyclerViewNews.adapter = adapter
                         binding.progressBarNews.visibility = View.GONE
                         binding.recyclerViewNews.visibility = View.VISIBLE
-//                        adapter.itemClickListener = { news ->
-//                            FragmentVideoNewsDetail.openWith(
-//                                requireActivity().supportFragmentManager,
-//                                news.id!!
-//                            )
-//                        }
+                        adapter.itemClickListener = { news ->
+                            FragmentVideoNewsDetail.openWith(
+                                requireActivity().supportFragmentManager,
+                                news.id!!
+                            )
+                        }
                     }
                 }
             }
