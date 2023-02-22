@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_image_background_shadow"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/buttonOption"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_setting"
+        app:tint="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/playbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/buttonPlay"
+            style="@style/ExoMediaButton.Play"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:src="@drawable/ic_play"
+            android:visibility="invisible"
+            app:tint="@color/white" />
+
+        <ProgressBar
+            android:id="@+id/progressBarLoading"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:indeterminateTint="@color/kColorThemeApp" />
+
+        <ImageView
+            android:id="@+id/buttonReplay5"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/buttonPlay"
+            android:src="@drawable/ic_replay_5"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/buttonForward5"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/buttonPlay"
+            android:src="@drawable/ic_forward_5"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPlayBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="@color/white" />
+
+
+        <com.google.android.exoplayer2.ui.DefaultTimeBar
+            android:id="@+id/exo_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:played_color="@color/kColorThemeApp"
+            app:scrubber_color="@color/kColorThemeApp" />
+
+        <TextView
+            android:id="@+id/exo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:text="00:00"
+            android:textColor="@color/white" />
+
+
+        <ImageView
+            android:id="@+id/buttonFullScreen"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:src="@drawable/exo_ic_fullscreen_enter" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
